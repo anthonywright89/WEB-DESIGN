@@ -1,0 +1,153 @@
+/* css/style.css */
+
+/* --- 1. CSS VARIABLES --- */
+:root {
+    --primary-blue: #1e3a8a;       /* Deep Navy for Header and Footer */
+    --secondary-blue: #3b82f6;     /* Brighter Blue for hover effects */
+    --nav-bg: #1f2937;             /* Dark Slate for Navigation */
+    --bg-color: #f3f4f6;           /* Soft Gray background for the body */
+    --text-main: #374151;          /* Dark Gray for readable text */
+    --card-bg: #ffffff;            /* White for the main content box */
+}
+
+/* --- 2. GLOBAL RESET & TYPOGRAPHY --- */
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-size: 18px; 
+    line-height: 1.6;
+    
+    /* Flexbox pushes footer to the bottom */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- 3. HEADER --- */
+header {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 2.5rem 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+/* Styles the new subtitle in the header */
+header .subtitle {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 300; 
+    color: #e5e7eb; 
+    letter-spacing: 0.5px;
+}
+
+/* --- 4. NAVIGATION --- */
+nav {
+    background-color: var(--nav-bg);
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+nav a:hover {
+    background-color: var(--secondary-blue);
+    color: white;
+}
+
+/* --- 5. MAIN CONTENT AREA --- */
+section {
+    background-color: var(--card-bg);
+    max-width: 1000px; 
+    width: 90%;
+    margin: 2.5rem auto; 
+    padding: 3rem;
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+    flex: 1; 
+}
+
+section p {
+    margin-bottom: 1rem;
+}
+
+/* --- 6. FOOTER --- */
+footer {
+    background-color: var(--primary-blue); /* Matches header exact shade */
+    color: white; 
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    margin-top: auto; 
+}
+
+/* --- 7. TABLES & FORMS (For your other pages) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+th {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tr:hover {
+    background-color: #f9fafb;
+}
+
+input[type="text"], input[type="number"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button, input[type="submit"] {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: var(--secondary-blue);
+}
