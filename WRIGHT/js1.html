@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anthony Wright - JavaScript Portfolio</title>
+<script type="text/javascript" src="script.js"></script>    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; }
+        section { background: #f4f4f4; padding: 15px; margin-bottom: 20px; border-radius: 5px; }
+        button { margin: 5px; padding: 8px 12px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h1>Anthony Wright - JS Activities 1-8 Dashboard</h1>
+    <p>Open Developer Tools (F12) Console to view console outputs!</p>
+
+    <section>
+        <h2>Activities 1, 3, & 6: Simple Console & Window Alerts</h2>
+        <button onclick="window.alert('Hello World')">Run Act 6: window.alert()</button>
+    </section>
+
+    <section>
+        <h2>Activities 2, 4, & 5: Variables & DOM Manipulation</h2>
+        <p>Current Element Text: <strong id="text">Original Text</strong></p>
+        <button onclick="runVariablesActivity()">Run Variable Demo (Changes text, alerts, logs name)</button>
+    </section>
+
+    <section>
+        <h2>Activity 7: document.write() Math Calculation</h2>
+        <p>The calculated value of (5 + 6) is: <strong><script>document.write(5 + 6);</script></strong></p>
+    </section>
+
+    <section>
+        <h2>Activity 8: innerText, innerHTML, textContent Comparison</h2>
+        <p id="example"> This paragraph element has excess spacing and has <span>a span element</span> inside.</p>
+        <button onclick="getInnerText()">Get innerText</button>
+        <button onclick="getInnerHTML()">Get innerHTML</button>
+        <button onclick="getTextContent()">Get textContent</button>
+    </section>
+
+    <script>
+        // Act 1 executes quietly in the background on load
+        console.log("Hello World (Act 1 Loaded Automatically)");
+    </script>
+</body>
+</html>
